@@ -21,7 +21,7 @@ class DetectEnvTest extends TestCase
     public function testDetectEnvFake()
     {
         $_SERVER['SERVER_NAME'] = 'localhost';
-        $envs = ['localhost' => 'dv'];
+        $envs = ['localhost' => 'dev'];
         $this->assertEquals(DetectEnv::get($envs), 'dev');
     }
 
