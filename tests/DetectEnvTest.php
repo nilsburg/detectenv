@@ -1,9 +1,8 @@
 <?php
 
-namespace proximitymad\detectenv;
-
 
 use PHPUnit\Framework\TestCase;
+use proximitymad\detectenv\DetectEnv;
 
 class DetectEnvTest extends TestCase
 {
@@ -22,7 +21,7 @@ class DetectEnvTest extends TestCase
     public function testDetectEnvFake()
     {
         $_SERVER['SERVER_NAME'] = 'localhost';
-        $envs = ['localhost' => 'dev'];
+        $envs = ['localhost' => 'dv'];
         $this->assertEquals(DetectEnv::get($envs), 'dev');
     }
 
